@@ -12,7 +12,7 @@ var workspace = Blockly.inject(blocklyDiv,
             minScale: 0.3,
             scaleSpeed: 1.2
         },
-        trashcan: false
+        trashcan: true
     });
 
 function myUpdateFunction(event) {

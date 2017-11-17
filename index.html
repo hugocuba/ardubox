@@ -45,10 +45,12 @@
                 </li>
                 <li><a href="#!" class="waves-effect"><i class="material-icons">settings</i>Configurações</a></li>
             </ul>
-
             <div class="col l12 m12 s12">
-                <div id="blocklyArea"></div>
-                <div id="blocklyDiv" style="position: absolute"></div>
+                <div id="blocklyArea">
+                    <a style="margin-top:10px; z-index:999;" class="btn-floating btn-large waves-effect waves-light green right"><i class="material-icons">send</i></a>
+                </div>
+                <div id="blocklyDiv" style="position: absolute">
+                </div>
                 <xml id="toolbox" style="display: none">
                     <category name="Control">
                         <block type="controls_if"></block>
@@ -62,28 +64,29 @@
                     <category name="Variáveis" custom="VARIABLE" colour="210"></category>
                     <category name="Funções" custom="PROCEDURE" colour="120"></category>
                 </xml>
+
             </div>
             <div class="fixed-action-btn horizontal">
                 <a class="btn-floating btn-large red">
                       <i class="large material-icons">menu</i>
                     </a>
                 <ul>
-                    <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Código Arduino"><i class="material-icons">code</i></a></li>
+                    <li><a class="btn-floating blue tooltipped modal-trigger" href="#codigo" data-position="top" data-delay="50"
+                            data-tooltip="Código Arduino"><i class="material-icons">code</i></a></li>
                 </ul>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col s12">
-                <ul class="collapsible" data-collapsible="expandable">
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">code</i>Código Arduino</div>
-                        <div class="collapsible-body">
-                            <textarea id="textarea"></textarea>
-                        </div>
-                    </li>
-                </ul>
+        <!-- Modal Structure -->
+        <div id="codigo" class="modal bottom-sheet modal-fixed-footer">
+            <div class="modal-content">
+                <textarea id="textarea"></textarea>
             </div>
-        </div>-->
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Copiar</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+        </div>
+
         <footer>
             <ul id="console" class="collapsible" data-collapsible="expandable">
                 <li>
