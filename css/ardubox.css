@@ -1,0 +1,24 @@
+html, body {
+    height: 100vh;
+    margin: 0px;
+}
+
+#blocklyArea{
+    height: 80vh;
+}
+
+.side-nav{
+    background-color: #FFFFFF;
+}
+
+.collapsible-header, .collapsible-body{
+    padding: 0.5rem;
+}
+
+#blocklyDiv{
+    padding: 0.5rem;
+}
+
+.blocklyMainBackground{
+    stroke: none;
+}
