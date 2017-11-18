@@ -52,17 +52,19 @@
                 <div id="blocklyDiv" style="position: absolute">
                 </div>
                 <xml id="toolbox" style="display: none">
-                    <category name="Control">
-                        <block type="controls_if"></block>
+                    <category name="Controles">
+                        <block type="controls_if" ></block>
                         <block type="controls_repeat_ext"></block>
                         <block type="logic_compare"></block>
                         <block type="math_number"></block>
                         <block type="math_arithmetic"></block>
                         <block type="text"></block>
-                        <block type="text_print"></block>
                     </category>
-                    <category name="Variáveis" custom="VARIABLE" colour="210"></category>
-                    <category name="Funções" custom="PROCEDURE" colour="120"></category>
+                    <category name="Variáveis" custom="VARIABLE"></category>
+                    <category name="Funções" custom="PROCEDURE"></category>
+                    <category name="Sensores">
+                        <block type="sensor_led13"></block>
+                    </category>
                 </xml>
 
             </div>
@@ -107,6 +109,7 @@
     <script src="blockly/blockly_compressed.js"></script>
     <script src="blockly/blocks_compressed.js"></script>
     <script src="blockly/arduino_compressed.js"></script>
+    <script src="blockly/blocks/sensors.js"></script>
     <script src="blockly/msg/js/pt-br.js"></script>
     <script type="text/javascript" src="js/blockly.js"></script>
     <script type="text/javascript" src="js/ardubox.js"></script>
