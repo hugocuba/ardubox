@@ -1,4 +1,4 @@
-Blockly.Blocks['sensor_led13'] = {
+Blockly.Blocks['saida_led13'] = {
     init: function() {
         this.appendDummyInput()
             .appendField(new Blockly.FieldImage("https://i.imgur.com/uDpddAT.jpg", 120, 70, ""))
