@@ -8,7 +8,9 @@ Blockly.Arduino['saida_led13'] = function(block) {
         'Serial.begin(9600);\n' +
         'pinMode(ledIntegrado, OUTPUT);\n';
 
-    var code = 'digitalWrite(ledIntegrado, ' + estado + ');';
+    var code = 
+        'digitalWrite(ledIntegrado, ' + estado + ');' +
+        'delay(3000);';
 
     return code;
 };
