@@ -48,7 +48,10 @@ Blockly.Blocks['sensor_ultrasonico'] = {
     this.appendStatementInput("NAME")
         .setCheck(null)
         .appendField(new Blockly.FieldImage("https://meetarduino.files.wordpress.com/2012/06/hc-sr04-lg.jpg", 120, 90, "*"))
-        .appendField("Ultrasonico");
+        .appendField("Distância")
+        .appendField(new Blockly.FieldDropdown([["menor que","OPTIONNAME"], ["maior que","OPTIONNAME"], ["igual a","OPTIONNAME"]]), "NAME")
+        .appendField(new Blockly.FieldNumber(0), "NAME")
+        .appendField("cm");
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
