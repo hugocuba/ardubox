@@ -1,5 +1,6 @@
 Blockly.Arduino['sensor_movimento'] = function(block) {
-    var status = block.getFieldValue('movimento');
+    
+    var mov = block.getFieldValue('mov');
     
     Blockly.Arduino.definitions_['define_sensorMovimento'] = 
         'int pinoSensorMovimento = 3;\n' +
@@ -7,7 +8,6 @@ Blockly.Arduino['sensor_movimento'] = function(block) {
         'int calibracaoSensorMovimento = 5;\n';
     
     Blockly.Arduino.setups_['setup_sensorMovimento'] = 
-        'Serial.begin(9600);\n' +
         'pinMode(pinoSensorMovimento,INPUT);\n' +
         'Serial.print("Calibrando o sensor de presença...")\n' +
         'for(int i = 0; i < calibracaoSensorMovimento; i++){\n' +
@@ -20,7 +20,7 @@ Blockly.Arduino['sensor_movimento'] = function(block) {
         'iniciaSensorMovimento = digitalRead(pinoSensorMovimento);\n' +
         'Serial.print("Valor do Sensor PIR: ");\n' +
         'Serial.println(iniciaSensorMovimento);\n' +
-        'if (iniciaSensorMovimento == ' + status +') {\n'
+        'if (iniciaSensorMovimento == ' + mov +') {\n'
         + branch +
         '\n}\n';
     return code;
