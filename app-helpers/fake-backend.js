@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -16,7 +16,7 @@
 
             // check user credentials and return fake jwt token if valid
             if (params.username === testUser.username && params.password === testUser.password) {
-                return [200, { token: 'fake-jwt-token' }, {}];
+                return [200, { token: 'fake-jwt-token', user: testUser }, {}];
             } else {
                 return [200, {}, {}];
             }

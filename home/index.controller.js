@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .controller('Home.IndexController', Controller);
+        .controller('HomeController', Controller);
 
     function Controller() {
         var vm = this;
@@ -11,6 +11,10 @@
         initController();
 
         function initController() {
+        }
+
+        function salvar(){
+            console.log("teste");
         }
     }
 

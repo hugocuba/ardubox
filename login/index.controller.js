@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .controller('Login.IndexController', Controller);
+        .controller('LoginController', Controller);
 
     function Controller($location, AuthenticationService) {
         var vm = this;
@@ -23,7 +23,7 @@
                 if (result === true) {
                     $location.path('/');
                 } else {
-                    Materialize.toast('I am a toast!', 4000);
+                    Materialize.toast('Usuário ou senha inválidos.', 5000);
                     vm.loading = false;
                 }
             });
