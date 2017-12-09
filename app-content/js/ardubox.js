@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
     $('#enviar').click(function(){
 
-        for(i = 8990; i < 9001; i++){
+        for(i = 8990; i <= 9000; i++){
 
             var url = 'http://127.00.0.1:' + i;
 
@@ -20,25 +20,26 @@ $( document ).ready(function() {
                 console.log("Achou o agente: " + endpoint)
             });*/
 
+            console.log('Testando porta ' + i);
+
             $.ajax({
-                url: url,
-                dataType: 'json',
-                sucess: function(){
-                    console.log('teste');
-                }
+                url: 'http://127.0.0.1:' + i + '/info',
+                async: false,
+                crossDomain: true,
+            }).done(function(){
+                console.log("Achou na porta " + i);
+
+                $.ajax({
+                    url: 'http://127.0.0.1:' + i,
+                    method: 'POST',
+                    contents: {
+                        "board":"arduino:avr:mega",
+                        "port":"COM10",
+                    }
+                }).done(function(){
+                    console.log("aasdasd")
+                });
             });
         }
-
-        console.log("Abrindo socket...");
-        var socket = io(endpoint);
-
-        socket.on('connect', function () {
-            console.log("Enviando instrução para o Arduino...")
-            socket.emit('message', list);
-
-            socket.on('message', function (data) {
-                console.log("retorno");
-            });
-        });
-    })
+    });
 });

@@ -23,7 +23,7 @@
                 if (result === true) {
                     $location.path('/');
                 } else {
-                    Materialize.toast('Usuário ou senha inválidos.', 5000);
+                    Materialize.toast('Usuário ou senha inválidos.', 3000);
                     vm.loading = false;
                 }
             });

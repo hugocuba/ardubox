@@ -12,10 +12,7 @@
 
         function initController() {
         }
-
-        function salvar(){
-            console.log("teste");
-        }
+        
     }
 
 })();
